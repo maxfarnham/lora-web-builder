@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: 'node_modules/onnxruntime-web/dist/ort-wasm*.{wasm,mjs}', dest: '' }
+        { src: 'node_modules/onnxruntime-web/dist/ort-wasm*.{wasm,mjs}', dest: '' },
+        { src: 'models/*.onnx', dest: 'public/models' }
       ]
     }),
   ],

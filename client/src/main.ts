@@ -6,8 +6,8 @@ import * as ort from 'onnxruntime-web';
   ort.env.wasm.wasmPaths = '/';
   console.log('WASM paths:', ort.env.wasm.wasmPaths);
 
-  const session = await ort.InferenceSession.create('/models/model.onnx', {
-    executionProviders: ['wasm']
+  const session = await ort.InferenceSession.create('/models/t2l_llama_8b_fp32.onnx', {
+    executionProviders: ['webgpu', 'wasm']
   });
 
   // 2. Build dummy input (a = [3x4], b = [4x3])
@@ -26,7 +26,10 @@ import * as ort from 'onnxruntime-web';
 
   const feeds = { a, b };
 
+  const dummy = new ort.Tensor('float32', new Float32Array(1024).fill(0), [1,1024]);
+  console.log((await session.run({embedding: dummy})).deltas.dims);
+
   // 3. Run & log
-  const output = await session.run(feeds);
-  console.log('ORT‑Web output:', output.c.data);   // → [4,6]
+  //const output = await session.run(feeds);
+  //console.log('ORT‑Web output:', output.c.data);   // → [4,6]
 })();
