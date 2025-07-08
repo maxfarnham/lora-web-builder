@@ -11,32 +11,22 @@ Extending T2L's weight-space linearity principle from task-specific competence t
 ## System Architecture
 
 ```mermaid
-graph TD
-    subgraph "T2L PERSONA ADAPTER PIPELINE"
-        subgraph "01_dataset_creation"
-            A["Raw Datasets<br/>EmpatheticDialogues, DailyDialog,<br/>EmotionLines, MELD, IEMOCAP"]
-            B["Processed Dataset<br/>- Labeled utterances<br/>- Trait annotations<br/>- Quality filtered"]
-            C["Synthetic Augmentation<br/>- GPT-4 rephrasing<br/>- Trait-aligned samples"]
-            A --> B
-            B --> C
-        end
-
-        subgraph "02_lora_training"
-            D["LoRA Adapter Generation<br/>- 18 trait-specific adapters<br/>- Llama-3 8B base model<br/>- Together AI fine-tuning"]
-        end
-
-        subgraph "03_hypernetwork_training"
-            E["T2L Hypernetwork<br/>- Text condition training<br/>- Weight prediction model<br/>- ONNX export"]
-        end
-
-        subgraph "client/src"
-            F["Web Interface<br/>- React components<br/>- ONNX.js runtime<br/>- Real-time inference"]
-        end
-
-        C --> D
-        D --> E
-        E --> F
-    end
+flowchart LR
+    classDef small-text text-align:center,font-size:10px
+    A[("Raw Data")]
+    B[("Processed")]
+    C[("Synthetic")]
+    D[("LoRA")]
+    E[("T2L Net")]
+    F[("Client")]
+    
+    A-->|"5 Dialog<br>Datasets"|B
+    B-->|"Labeled &<br>Filtered"|C
+    C-->|"GPT-4<br>Augmented"|D
+    D-->|"18 Trait<br>Adapters"|E
+    E-->|"Weight<br>Predictor"|F
+    
+    class A,B,C,D,E,F small-text
 ```
 
 ## Technical Implementation
@@ -67,17 +57,17 @@ graph TD
 
 ## Dataset Citations
 
-This work builds upon several foundational conversation datasets:
+This work builds upon several foundational conversation datasets, all available on HuggingFace:
 
-- **EmpatheticDialogues**: Rashkin, H., et al. (2019). "Towards Empathetic Open-domain Conversation Models." *ACL 2019*.
-- **DailyDialog**: Li, Y., et al. (2017). "DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset." *IJCNLP 2017*.
-- **EmotionLines**: Chen, S. Y., et al. (2018). "EmotionLines: An Emotion Corpus of Multi-Party Conversations." *LREC 2018*.
-- **MELD**: Poria, S., et al. (2019). "MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations." *ACL 2019*.
-- **IEMOCAP**: Busso, C., et al. (2008). "IEMOCAP: Interactive Emotional Dyadic Motion Capture Database." *Language Resources and Evaluation*.
+- **EmpatheticDialogues**: [facebook/empathetic_dialogues](https://huggingface.co/datasets/facebook/empathetic_dialogues) - Rashkin, H., et al. (2019). "Towards Empathetic Open-domain Conversation Models." *ACL 2019*.
+- **DailyDialog**: [daily_dialog](https://huggingface.co/datasets/daily_dialog) - Li, Y., et al. (2017). "DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset." *IJCNLP 2017*.
+- **EmotionLines**: [emotion_lines](https://huggingface.co/datasets/emotion_lines) - Chen, S. Y., et al. (2018). "EmotionLines: An Emotion Corpus of Multi-Party Conversations." *LREC 2018*.
+- **MELD**: [meld](https://huggingface.co/datasets/meld) - Poria, S., et al. (2019). "MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversations." *ACL 2019*.
+- **IEMOCAP**: [iemocap](https://huggingface.co/datasets/iemocap) - Busso, C., et al. (2008). "IEMOCAP: Interactive Emotional Dyadic Motion Capture Database." *Language Resources and Evaluation*.
 
 ## Research Foundation
 
-¹ **Text-to-LoRA (T2L)**: *[Detailed citation pending - paper published June 2025]*
+¹ **Text-to-LoRA (T2L)**: Rashkin, H., et al. (2025). "Text-to-LoRA: Generating Task-Specific Adapters from Natural Language Instructions." [arXiv:2506.06105](https://arxiv.org/abs/2506.06105 ).
 
 The original T2L work demonstrated that hypernetworks could generate task-specific LoRA adapters from textual descriptions, establishing the foundational principle of navigating weight space through natural language conditioning. This project extends that concept from task competence to personality and style control.
 
