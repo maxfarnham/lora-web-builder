@@ -8,25 +8,45 @@ This project leverages the Text-to-LoRA (T2L) hypernetwork architecture¹ to cre
 
 Extending T2L's weight-space linearity principle from task-specific competence to personality trait control, enabling real-time persona switching without model retraining.
 
-## System Architecture
+## System Overview
 
 ```mermaid
 flowchart LR
-    classDef small-text text-align:center,font-size:10px
-    A[("Raw Data")]
-    B[("Processed")]
-    C[("Synthetic")]
-    D[("LoRA")]
-    E[("T2L Net")]
-    F[("Client")]
-    
-    A-->|"5 Dialog<br>Datasets"|B
-    B-->|"Labeled &<br>Filtered"|C
-    C-->|"GPT-4<br>Augmented"|D
-    D-->|"18 Trait<br>Adapters"|E
-    E-->|"Weight<br>Predictor"|F
-    
-    class A,B,C,D,E,F small-text
+    classDef stage text-align:center,font-size:12px
+    classDef step text-align:center,font-size:10px
+
+    subgraph "01_dataset_creation"
+        A[("Raw Data")]
+        B[("Processed")]
+        C[("Augmented")]
+        A-->|"5 Dialog<br>Datasets"|B
+        B-->|"Trait Labels<br>& Filtering"|C
+    end
+
+    subgraph "02_lora_training"
+        D[("Base LoRAs")]
+        E[("Fine-tuned")]
+        D-->|"18 Trait<br>Adapters"|E
+    end
+
+    subgraph "03_hypernetwork_training"
+        F[("T2L Model")]
+        G[("ONNX Export")]
+        F-->|"Weight<br>Predictor"|G
+    end
+
+    subgraph "client/src"
+        H[("Web UI")]
+        I[("Runtime")]
+        H-->|"React +<br>ONNX.js"|I
+    end
+
+    C --> D
+    E --> F 
+    G --> H
+
+    class A,B,C,D,E,F,G,H,I step
+    class 01_dataset_creation,02_lora_training,03_hypernetwork_training,client/src stage
 ```
 
 ## Technical Implementation
