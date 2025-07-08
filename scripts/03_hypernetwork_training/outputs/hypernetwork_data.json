@@ -1,0 +1,242 @@
+{
+  "compassion_minus": {
+    "file_path": "lora_checkpoints/compassion_minus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "compassion_plus": {
+    "file_path": "lora_checkpoints/compassion_plus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0
+    ]
+  },
+  "courage_minus": {
+    "file_path": "lora_checkpoints/courage_minus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0
+    ]
+  },
+  "courage_plus": {
+    "file_path": "lora_checkpoints/courage_plus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0
+    ]
+  },
+  "discipline_minus": {
+    "file_path": "lora_checkpoints/discipline_minus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "discipline_plus": {
+    "file_path": "lora_checkpoints/discipline_plus.safetensors",
+    "trait_vector": [
+      0.3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "humor_minus": {
+    "file_path": "lora_checkpoints/humor_minus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.3
+    ]
+  },
+  "humor_plus": {
+    "file_path": "lora_checkpoints/humor_plus.safetensors",
+    "trait_vector": [
+      0,
+      0.3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "intellect_minus": {
+    "file_path": "lora_checkpoints/intellect_minus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0
+    ]
+  },
+  "intellect_plus": {
+    "file_path": "lora_checkpoints/intellect_plus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0.3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "neuroticism_minus": {
+    "file_path": "lora_checkpoints/neuroticism_minus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "neuroticism_plus": {
+    "file_path": "lora_checkpoints/neuroticism_plus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0,
+      0
+    ]
+  },
+  "sarcasm_minus": {
+    "file_path": "lora_checkpoints/sarcasm_minus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "sarcasm_plus": {
+    "file_path": "lora_checkpoints/sarcasm_plus.safetensors",
+    "trait_vector": [
+      0,
+      0,
+      0,
+      0,
+      0.3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "wisdom_minus": {
+    "file_path": "lora_checkpoints/wisdom_minus.safetensors",
+    "trait_vector": [
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "wisdom_plus": {
+    "file_path": "lora_checkpoints/wisdom_plus.safetensors",
+    "trait_vector": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+# Requirements for hypernetwork training on Together AI GPU Clusters
+# Note: Many packages may already be available in the cluster environment
+
+torch>=2.2.0
+torchvision>=0.17.0
+torchaudio>=2.2.0
+safetensors>=0.4.0
+tqdm>=4.64.0
+numpy>=1.21.0
+transformers>=4.21.0
+accelerate>=0.20.0
+together>=1.0.0
+tensorboard>=2.10.0
+wandb>=0.13.0

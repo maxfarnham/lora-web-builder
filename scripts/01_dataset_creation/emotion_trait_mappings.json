@@ -1,0 +1,270 @@
+{
+  "_metadata": {
+    "description": "Unified emotion-to-trait mappings for all dialogue datasets",
+    "trait_names": ["intellect", "discipline", "joy", "wisdom", "compassion", "neuroticism", "courage", "humor", "formality", "sarcasm"],
+    "trait_interpretations": {
+      "intellect": "Intellect ↔ Simple-minded",
+      "discipline": "Discipline ↔ Impulsive",
+      "joy": "Joy ↔ Sadness",
+      "wisdom": "Wisdom ↔ Naive",
+      "compassion": "Compassion ↔ Callous",
+      "neuroticism": "Neuroticism ↔ Stable (positive = neurotic, negative = stable)",
+      "courage": "Courage ↔ Cowardly",
+      "humor": "Humor ↔ Serious",
+      "formality": "Formality ↔ Casual",
+      "sarcasm": "Sarcasm ↔ Sincere"
+    },
+    "skip_field_explanation": "If 'skip' is true, this emotion will be excluded from trait corpus generation"
+  },
+  "emotions": {
+    "afraid": {
+      "traits": {"joy": -0.5, "neuroticism": 0.5, "courage": -0.5},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Core fear emotion - shared across most datasets"
+    },
+    "angry": {
+      "traits": {"discipline": -0.5, "compassion": -0.7, "neuroticism": 0.5, "humor": -0.5, "sarcasm": 0.6},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Core anger emotion - shared across most datasets"
+    },
+    "anxious": {
+      "traits": {"joy": -0.5, "neuroticism": 1, "courage": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - anxiety variant"
+    },
+    "annoyed": {
+      "traits": {"compassion": -0.5, "neuroticism": 0.2, "humor": -0.5, "sarcasm": 0.5},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Mild anger variant - shared across datasets"
+    },
+    "anticipating": {
+      "traits": {"joy": 0.5, "courage": 0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - positive anticipation"
+    },
+    "apprehensive": {
+      "traits": {"joy": -0.5, "neuroticism": 0.8, "courage": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - worry variant"
+    },
+    "ashamed": {
+      "traits": {"joy": -1, "neuroticism": 0.8, "courage": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - shame emotion"
+    },
+    "caring": {
+      "traits": {"wisdom": 0.3, "compassion": 0.8, "sarcasm": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - caring emotion"
+    },
+    "confident": {
+      "traits": { "neuroticism": -0.7, "courage": 0.8, "intellect": 0.5, "discipline": 0.5 },
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - confidence emotion"
+    },
+    "content": {
+      "traits": {"joy": 0.5, "neuroticism": -0.5 },
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Contentment - shared across datasets."
+    },
+    "devastated": {
+      "traits": {"joy": -1, "compassion": -0.5, "neuroticism": 1, "courage": -0.7},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Extreme sadness - shared across datasets"
+    },
+    "disappointed": {
+      "traits": {"joy": -0.7, "neuroticism": 0.7, "courage": -0.4},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Disappointment - shared across datasets"
+    },
+    "disgusted": {
+      "traits": {"discipline": -0.5, "wisdom": -0.4, "compassion": -0.7, "neuroticism": 0.6, "humor": -0.5 },
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Core disgust emotion - shared across datasets"
+    },
+    "embarrassed": {
+      "traits": {"joy": -0.6, "neuroticism": 0.7, "courage": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - embarrassment emotion"
+    },
+    "excited": {
+      "traits": {"joy": 1, "neuroticism": -0.6, "courage": 0.6, "humor": 0.5},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "High-energy positive emotion - shared across datasets. Reduced over-attribution."
+    },
+    "faithful": {
+      "traits": {"discipline": 0.7, "wisdom": 0.8, "compassion": 0.8, "courage": 0.6, "formality": 0.5, "sarcasm": -0.7},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - faith/loyalty emotion"
+    },
+    "furious": {
+      "traits": {"discipline": -0.5, "compassion": -0.7, "neuroticism": 0.7, "humor": -1 },
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Extreme anger - shared across datasets."
+    },
+    "grateful": {
+      "traits": {"wisdom": 0.5, "compassion": 1, "sarcasm": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - gratitude emotion"
+    },
+    "guilty": {
+      "traits": {"joy": -0.7, "neuroticism": 1},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - guilt emotion"
+    },
+    "happy": {
+      "traits": {"joy": 1, "compassion": 0.5, "neuroticism": -0.5, "humor": 0.5},
+      "sources": ["EmotionLines", "MELD", "IEMOCAP", "DailyDialog"],
+      "notes": "Core happiness emotion - shared across most datasets."
+    },
+    "hopeful": {
+      "traits": {"wisdom": 0.6, "neuroticism": -0.6, "courage": 0.7},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - hope emotion"
+    },
+    "impressed": {
+      "traits": {"joy": 0.5, "compassion": 0.5},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Being impressed - shared across datasets."
+    },
+    "jealous": {
+      "traits": {"discipline": -0.6, "joy": -0.7, "wisdom": -0.5, "compassion": -0.8, "neuroticism": 0.8, "sarcasm": 0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - jealousy emotion"
+    },
+    "joyful": {
+      "traits": {"joy": 1, "compassion": 0.5, "neuroticism": -1, "sarcasm": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - intense joy"
+    },
+    "lonely": {
+      "traits": {"joy": -0.8, "compassion": -0.4, "neuroticism": 0.8, "courage": -0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - loneliness emotion"
+    },
+    "nostalgic": {
+      "traits": {"joy": -0.3, "wisdom": 0.6, "compassion": 0.5},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - nostalgia emotion. Bittersweet nature."
+    },
+    "prepared": {
+      "traits": {"intellect": 0.7, "discipline": 0.8, "wisdom": 0.6, "neuroticism": -0.6, "courage": 0.6},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - preparedness emotion"
+    },
+    "proud": {
+      "traits": {"joy": 0.7, "courage": 0.8, "neuroticism": -0.5},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Pride emotion - shared across datasets. Distinguishes healthy vs unhealthy pride."
+    },
+    "sad": {
+      "traits": {"joy": -1, "neuroticism": 0.8, "courage": -0.5},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP", "DailyDialog"],
+      "notes": "Core sadness emotion - shared across all datasets"
+    },
+    "sentimental": {
+      "traits": {"wisdom": 0.5, "compassion": 0.6},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - sentimentality emotion"
+    },
+    "surprised": {
+      "traits": {},
+      "skip": true,
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP", "DailyDialog"],
+      "notes": "Core surprise emotion - SKIPPED due to valence neutrality and weak trait relationships"
+    },
+    "terrified": {
+      "traits": {"joy": -1, "wisdom": -0.3, "neuroticism": 1, "courage": -0.8},
+      "sources": ["EmpatheticDialogues", "EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Extreme fear - shared across datasets"
+    },
+    "trusting": {
+      "traits": {"wisdom": 0.6, "compassion": 0.7, "neuroticism": -0.5, "sarcasm": -0.6},
+      "sources": ["EmpatheticDialogues"],
+      "notes": "EmpatheticDialogues specific - trust emotion"
+    },
+    "anger": {
+      "traits": {"discipline": -0.7, "compassion": -0.8, "neuroticism": 0.8, "humor": -0.5, "sarcasm": 0.6},
+      "sources": ["EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Noun form of anger - used in newer datasets. Fixed joy mapping."
+    },
+    "disgust": {
+      "traits": {"discipline": -0.5, "wisdom": -0.4, "compassion": -0.7, "neuroticism": 0.6, "humor": -0.5, "sarcasm": 0.4},
+      "sources": ["EmotionLines", "MELD", "IEMOCAP", "DailyDialog"],
+      "notes": "Noun form of disgust - used in newer datasets"
+    },
+    "fear": {
+      "traits": {"joy": -0.8, "neuroticism": 0.9, "courage": -0.7},
+      "sources": ["EmotionLines", "MELD", "IEMOCAP", "DailyDialog"],
+      "notes": "Noun form of fear - used in newer datasets"
+    },
+    "joy": {
+      "traits": {"joy": 1, "compassion": 0.6, "neuroticism": -0.8, "humor": 0.6},
+      "sources": ["EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Noun form of joy - used in newer datasets."
+    },
+    "surprise": {
+      "traits": {},
+      "skip": true,
+      "sources": ["EmotionLines", "MELD", "IEMOCAP"],
+      "notes": "Noun form of surprise - SKIPPED due to valence neutrality and weak trait relationships"
+    },
+    "neutral": {
+      "traits": {"neuroticism": -0.3, "discipline": 0.3},
+      "sources": ["EmotionLines", "MELD", "IEMOCAP", "DailyDialog"],
+      "notes": "Neutral/no emotion - shared across newer datasets. Minimal trait impact."
+    },
+    "frustrated": {
+      "traits": {"discipline": -0.6, "compassion": -0.5, "neuroticism": 0.7, "humor": -0.4, "sarcasm": 0.4},
+      "sources": ["IEMOCAP"],
+      "notes": "IEMOCAP specific - frustration emotion"
+    },
+    "sadness": {
+      "traits": {"joy": -1, "neuroticism": 0.8, "courage": -0.5},
+      "sources": ["MELD"],
+      "notes": "MELD specific - sadness emotion (noun form)"
+    }
+  },
+  "dailydialog_numeric_mapping": {
+    "0": {
+      "emotion_name": "no_emotion",
+      "traits": {"neuroticism": -0.3, "discipline": 0.3, "formality": 0.2},
+      "notes": "DailyDialog specific - neutral/composed state"
+    },
+    "1": {
+      "emotion_name": "anger",
+      "traits": {"discipline": -0.7, "compassion": -0.8, "neuroticism": 0.8, "humor": -0.5, "sarcasm": 0.6},
+      "notes": "DailyDialog specific - maps to anger emotion. Fixed joy mapping."
+    },
+    "2": {
+      "emotion_name": "disgust",
+      "traits": {"discipline": -0.5, "wisdom": -0.4, "compassion": -0.7, "neuroticism": 0.6, "humor": -0.5, "sarcasm": 0.4},
+      "notes": "DailyDialog specific - maps to disgust emotion"
+    },
+    "3": {
+      "emotion_name": "fear",
+      "traits": {"joy": -1, "neuroticism": 1, "courage": -1},
+      "notes": "DailyDialog specific - maps to fear emotion"
+    },
+    "4": {
+      "emotion_name": "happiness",
+      "traits": {"joy": 1, "compassion": 0.6, "neuroticism": -0.8, "humor": 0.6},
+      "notes": "DailyDialog specific - maps to happiness emotion"
+    },
+    "5": {
+      "emotion_name": "sadness",
+      "traits": {"joy": -1, "neuroticism": 0.8, "courage": -0.5},
+      "notes": "DailyDialog specific - maps to sadness emotion"
+    },
+    "6": {
+      "emotion_name": "surprise",
+      "traits": {},
+      "skip": true,
+      "notes": "DailyDialog specific - SKIPPED due to valence neutrality and weak trait relationships"
+    }
+  },
+  "empathetic_listener_traits": {
+    "traits": {"wisdom": 0.5, "compassion": 0.5, "neuroticism": -0.7, "formality": 0.5, "sarcasm": -0.8},
+    "notes": "Applied to empathetic listener responses in EmpatheticDialogues"
+  }
+} 

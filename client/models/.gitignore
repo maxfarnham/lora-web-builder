@@ -1,1 +1,2 @@
-*.onnx # models can be large, ignore by default. See t2l_readme.md for instructions on how to export them.
+# models can be large, ignore by default. See t2l_readme.md for instructions on how to export them.
+*.onnx

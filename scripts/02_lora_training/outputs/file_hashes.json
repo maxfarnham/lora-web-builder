@@ -1,0 +1,98 @@
+{
+  "3901ac6d08495593cbaaf3cca2776d87": {
+    "job_id": "ft-49862910-601a",
+    "file_name": "intellect_minus.jsonl",
+    "trait": "intellect_minus",
+    "created_at": 1751944619.036846
+  },
+  "0259413d9bee134fbb5651380800df49": {
+    "job_id": "ft-1f9b33e6-1eb5",
+    "file_name": "intellect_plus.jsonl",
+    "trait": "intellect_plus",
+    "created_at": 1751944620.703866
+  },
+  "1700870b79ad1793c6281ee995499c81": {
+    "job_id": "ft-a9e2fcd5-5bad",
+    "file_name": "compassion_minus.jsonl",
+    "trait": "compassion_minus",
+    "created_at": 1751946109.9367156
+  },
+  "e28af4343937f3539802ab35390d7fa2": {
+    "job_id": "ft-5cb34dac-7046",
+    "file_name": "compassion_plus.jsonl",
+    "trait": "compassion_plus",
+    "created_at": 1751946112.4286582
+  },
+  "09d613e1f5de3d25078ada74ffb1f0cd": {
+    "job_id": "ft-5037bfd7-8b98",
+    "file_name": "courage_minus.jsonl",
+    "trait": "courage_minus",
+    "created_at": 1751946113.851749
+  },
+  "c59d475a5b69574ed036301436300c8c": {
+    "job_id": "ft-f25eae1c-133f",
+    "file_name": "courage_plus.jsonl",
+    "trait": "courage_plus",
+    "created_at": 1751946115.37164
+  },
+  "66c91202e515896768d06dda9cbd13c9": {
+    "job_id": "ft-091d015a-1db6",
+    "file_name": "discipline_minus.jsonl",
+    "trait": "discipline_minus",
+    "created_at": 1751946117.0666728
+  },
+  "66a77e0e3f6474a809bc1e5ba1a407b5": {
+    "job_id": "ft-0e18c671-3fbb",
+    "file_name": "discipline_plus.jsonl",
+    "trait": "discipline_plus",
+    "created_at": 1751946118.7647414
+  },
+  "dd7f29fb340993375453fbc3e282d686": {
+    "job_id": "ft-3b157ebb-0765",
+    "file_name": "humor_minus.jsonl",
+    "trait": "humor_minus",
+    "created_at": 1751946120.0826104
+  },
+  "95c2e63d70b677a5ef1524a4fdece71b": {
+    "job_id": "ft-c22fcb9c-a169",
+    "file_name": "humor_plus.jsonl",
+    "trait": "humor_plus",
+    "created_at": 1751946121.557614
+  },
+  "ca0ee33978b504718ef8007aa7a1b4fe": {
+    "job_id": "ft-2c22a264-6259",
+    "file_name": "neuroticism_minus.jsonl",
+    "trait": "neuroticism_minus",
+    "created_at": 1751946125.4981287
+  },
+  "2df16d04558d30b38642b1e2e62cf81e": {
+    "job_id": "ft-d5f9af5e-0da0",
+    "file_name": "neuroticism_plus.jsonl",
+    "trait": "neuroticism_plus",
+    "created_at": 1751946128.1449358
+  },
+  "118772ac13c326c28ae9af8e684a6bbd": {
+    "job_id": "ft-e967d000-669e",
+    "file_name": "sarcasm_minus.jsonl",
+    "trait": "sarcasm_minus",
+    "created_at": 1751946130.4850397
+  },
+  "e8680c34f2b351688620b9af01e53f5a": {
+    "job_id": "ft-1ee66061-d829",
+    "file_name": "sarcasm_plus.jsonl",
+    "trait": "sarcasm_plus",
+    "created_at": 1751946131.9760797
+  },
+  "472bd8bb422220238440e81cdd8cd0bf": {
+    "job_id": "ft-4390ea1a-5184",
+    "file_name": "wisdom_minus.jsonl",
+    "trait": "wisdom_minus",
+    "created_at": 1751946133.4425678
+  },
+  "d5389f939d151a1c2c2b5da8b86383f7": {
+    "job_id": "ft-d67d5017-611b",
+    "file_name": "wisdom_plus.jsonl",
+    "trait": "wisdom_plus",
+    "created_at": 1751946135.0122976
+  }
+}
